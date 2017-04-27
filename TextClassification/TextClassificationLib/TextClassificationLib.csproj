@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FEED8200-2FE2-4149-A8B7-D5CC93A96577}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TextClassificationLib</RootNamespace>
+    <AssemblyName>TextClassificationLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accord.Math\Accord.Statistics\Classes.cs" />
+    <Compile Include="Accord.Math\Accord.Statistics\Measures.Histogram.cs" />
+    <Compile Include="Accord.Math\Accord.Statistics\Measures.Matrix.cs" />
+    <Compile Include="Accord.Math\Accord.Statistics\Measures.Matrix.Weighted.cs" />
+    <Compile Include="Accord.Math\Accord.Statistics\Measures.Vectors.cs" />
+    <Compile Include="Accord.Math\Accord.Statistics\Measures.Vectors.Weighted.cs" />
+    <Compile Include="Accord.Math\AForge.Math\ContinuousHistogram.cs" />
+    <Compile Include="Accord.Math\AForge.Math\FourierTransform.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Gaussian.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Geometry\ClosePointsMergingOptimizer.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Geometry\CoplanarPosit.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Geometry\FlatAnglesOptimizer.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Geometry\GeometryTools.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Geometry\GrahamConvexHull.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Geometry\IConvexHullAlgorithm.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Geometry\IShapeOptimizer.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Geometry\Line.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Geometry\LineSegment.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Geometry\LineStraighteningOptimizer.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Geometry\PointsCloud.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Geometry\POSIT.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Geometry\ShapeType.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Geometry\SimpleShapeChecker.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Matrix3x3.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Matrix4x4.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Metrics\CosineDistance.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Metrics\CosineSimilarity.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Metrics\EuclideanDistance.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Metrics\EuclideanSimilarity.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Metrics\HammingDistance.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Metrics\IDistance.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Metrics\ISimilarity.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Metrics\JaccardDistance.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Metrics\ManhattanDistance.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Metrics\PearsonCorrelation.cs" />
+    <Compile Include="Accord.Math\AForge.Math\PerlinNoise.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Random\ExponentialGenerator.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Random\GaussianGenerator.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Random\IRandomNumberGenerator.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Random\StandardGenerator.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Random\UniformGenerator.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Random\UniformOneGenerator.cs" />
+    <Compile Include="Accord.Math\AForge.Math\SVD.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Vector3.cs" />
+    <Compile Include="Accord.Math\AForge.Math\Vector4.cs" />
+    <Compile Include="Accord.Math\Combinatorics.cs" />
+    <Compile Include="Accord.Math\Comparers\Accord.Math.Comparers.cs" />
+    <Compile Include="Accord.Math\Comparers\ArrayComparer`1.cs" />
+    <Compile Include="Accord.Math\Comparers\CustomComparer`1.cs" />
+    <Compile Include="Accord.Math\Comparers\ElementComparer.cs" />
+    <Compile Include="Accord.Math\Comparers\GeneralComparer.cs" />
+    <Compile Include="Accord.Math\Comparers\StableComparer.cs" />
+    <Compile Include="Accord.Math\Constants.cs" />
+    <Compile Include="Accord.Math\Convergence\AbsoluteConvergence.cs" />
+    <Compile Include="Accord.Math\Convergence\Base\IConvergence.cs" />
+    <Compile Include="Accord.Math\Convergence\Base\ISingleValueConvergence.cs" />
+    <Compile Include="Accord.Math\Convergence\GeneralConvergence.cs" />
+    <Compile Include="Accord.Math\Convergence\RelativeConvergence.cs" />
+    <Compile Include="Accord.Math\Convergence\RelativeParameterConvergence.cs" />
+    <Compile Include="Accord.Math\Decompositions\Accord.Math.Decompositions.cs" />
+    <Compile Include="Accord.Math\Decompositions\Base\ISolverArrayDecomposition.cs" />
+    <Compile Include="Accord.Math\Decompositions\Base\ISolverMatrixDecomposition.cs" />
+    <Compile Include="Accord.Math\Decompositions\CholeskyDecomposition.cs" />
+    <Compile Include="Accord.Math\Decompositions\CholeskyDecompositionD.cs" />
+    <Compile Include="Accord.Math\Decompositions\CholeskyDecompositionF.cs" />
+    <Compile Include="Accord.Math\Decompositions\EigenvalueDecomposition.cs" />
+    <Compile Include="Accord.Math\Decompositions\EigenvalueDecompositionF.cs" />
+    <Compile Include="Accord.Math\Decompositions\GeneralizedEigenvalueDecomposition.cs" />
+    <Compile Include="Accord.Math\Decompositions\GramSchmidtOrthogonalization.cs" />
+    <Compile Include="Accord.Math\Decompositions\JaggedCholeskyDecomposition.cs" />
+    <Compile Include="Accord.Math\Decompositions\JaggedCholeskyDecompositionD.cs" />
+    <Compile Include="Accord.Math\Decompositions\JaggedCholeskyDecompositionF.cs" />
+    <Compile Include="Accord.Math\Decompositions\JaggedEigenvalueDecomposition.cs" />
+    <Compile Include="Accord.Math\Decompositions\JaggedEigenvalueDecompositionF.cs" />
+    <Compile Include="Accord.Math\Decompositions\JaggedGeneralizedEigenvalueDecomposition.cs" />
+    <Compile Include="Accord.Math\Decompositions\JaggedLuDecomposition.cs" />
+    <Compile Include="Accord.Math\Decompositions\JaggedLuDecompositionD.cs" />
+    <Compile Include="Accord.Math\Decompositions\JaggedLuDecompositionF.cs" />
+    <Compile Include="Accord.Math\Decompositions\JaggedQrDecomposition.cs" />
+    <Compile Include="Accord.Math\Decompositions\JaggedQrDecompositionD.cs" />
+    <Compile Include="Accord.Math\Decompositions\JaggedQrDecompositionF.cs" />
+    <Compile Include="Accord.Math\Decompositions\JaggedSingularValueDecomposition.cs" />
+    <Compile Include="Accord.Math\Decompositions\JaggedSingularValueDecompositionD.cs" />
+    <Compile Include="Accord.Math\Decompositions\JaggedSingularValueDecompositionF.cs" />
+    <Compile Include="Accord.Math\Decompositions\LuDecomposition.cs" />
+    <Compile Include="Accord.Math\Decompositions\LuDecompositionD.cs" />
+    <Compile Include="Accord.Math\Decompositions\LuDecompositionF.cs" />
+    <Compile Include="Accord.Math\Decompositions\NonnegativeMatrixFactorization.cs" />
+    <Compile Include="Accord.Math\Decompositions\QrDecomposition.cs" />
+    <Compile Include="Accord.Math\Decompositions\QrDecompositionD.cs" />
+    <Compile Include="Accord.Math\Decompositions\QrDecompositionF.cs" />
+    <Compile Include="Accord.Math\Decompositions\SingularValueDecomposition.cs" />
+    <Compile Include="Accord.Math\Decompositions\SingularValueDecompositionD.cs" />
+    <Compile Include="Accord.Math\Decompositions\SingularValueDecompositionF.cs" />
+    <Compile Include="Accord.Math\Differentiation\FiniteDifferences.cs" />
+    <Compile Include="Accord.Math\Distance.cs" />
+    <Compile Include="Accord.Math\Distance.Generated.cs" />
+    <Compile Include="Accord.Math\Distance1.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Distance.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accord.Math\Distances\Angular.cs" />
+    <Compile Include="Accord.Math\Distances\ArgMax.cs" />
+    <Compile Include="Accord.Math\Distances\Base\IDistance.cs" />
+    <Compile Include="Accord.Math\Distances\Base\IMetric.cs" />
+    <Compile Include="Accord.Math\Distances\Base\ISimilarity.cs" />
+    <Compile Include="Accord.Math\Distances\BrayCurtis.cs" />
+    <Compile Include="Accord.Math\Distances\Canberra.cs" />
+    <Compile Include="Accord.Math\Distances\Chebyshev.cs" />
+    <Compile Include="Accord.Math\Distances\Cosine.cs" />
+    <Compile Include="Accord.Math\Distances\Dice.cs" />
+    <Compile Include="Accord.Math\Distances\Euclidean.cs" />
+    <Compile Include="Accord.Math\Distances\Hamming.cs" />
+    <Compile Include="Accord.Math\Distances\Hamming`1.cs" />
+    <Compile Include="Accord.Math\Distances\Hellinger.cs" />
+    <Compile Include="Accord.Math\Distances\Jaccard.cs" />
+    <Compile Include="Accord.Math\Distances\Jaccard`1.cs" />
+    <Compile Include="Accord.Math\Distances\Kulczynski.cs" />
+    <Compile Include="Accord.Math\Distances\Levenshtein.cs" />
+    <Compile Include="Accord.Math\Distances\Levenshtein`1.cs" />
+    <Compile Include="Accord.Math\Distances\Mahalanobis.cs" />
+    <Compile Include="Accord.Math\Distances\Manhattan.cs" />
+    <Compile Include="Accord.Math\Distances\Matching.cs" />
+    <Compile Include="Accord.Math\Distances\Minkowski.cs" />
+    <Compile Include="Accord.Math\Distances\Modular.cs" />
+    <Compile Include="Accord.Math\Distances\PearsonCorrelation.cs" />
+    <Compile Include="Accord.Math\Distances\RogersTanimoto.cs" />
+    <Compile Include="Accord.Math\Distances\RusselRao.cs" />
+    <Compile Include="Accord.Math\Distances\SokalMichener.cs" />
+    <Compile Include="Accord.Math\Distances\SokalSneath.cs" />
+    <Compile Include="Accord.Math\Distances\SquaredMahalanobis.cs" />
+    <Compile Include="Accord.Math\Distances\SquareEuclidean.cs" />
+    <Compile Include="Accord.Math\Distances\Yule.cs" />
+    <Compile Include="Accord.Math\Environments\OctaveEnvironment.cs" />
+    <Compile Include="Accord.Math\Environments\REnvironment.cs" />
+    <Compile Include="Accord.Math\Formats\Base\IMatrixFormatProvider.cs" />
+    <Compile Include="Accord.Math\Formats\Base\MatrixFormatProviderBase.cs" />
+    <Compile Include="Accord.Math\Formats\Base\MatrixFormatter.cs" />
+    <Compile Include="Accord.Math\Formats\CSharpArrayFormatProvider.cs" />
+    <Compile Include="Accord.Math\Formats\CSharpJaggedMatrixFormatProvider.cs" />
+    <Compile Include="Accord.Math\Formats\CSharpMatrixFormatProvider.cs" />
+    <Compile Include="Accord.Math\Formats\DefaultArrayFormatProvider.cs" />
+    <Compile Include="Accord.Math\Formats\DefaultMatrixFormatProvider.cs" />
+    <Compile Include="Accord.Math\Formats\OctaveArrayFormatProvider.cs" />
+    <Compile Include="Accord.Math\Formats\OctaveMatrixFormatProvider.cs" />
+    <Compile Include="Accord.Math\Functions\Bessel.cs" />
+    <Compile Include="Accord.Math\Functions\Beta.cs" />
+    <Compile Include="Accord.Math\Functions\Gabor.cs" />
+    <Compile Include="Accord.Math\Functions\Gamma.cs" />
+    <Compile Include="Accord.Math\Functions\Normal.cs" />
+    <Compile Include="Accord.Math\Functions\OwensT.cs" />
+    <Compile Include="Accord.Math\Geometry\Circle.cs" />
+    <Compile Include="Accord.Math\Geometry\ConvexHullDefects.cs" />
+    <Compile Include="Accord.Math\Geometry\ConvexityDefect.cs" />
+    <Compile Include="Accord.Math\Geometry\DiscreteCurveEvolution.cs" />
+    <Compile Include="Accord.Math\Geometry\KCurvature.cs" />
+    <Compile Include="Accord.Math\Geometry\Plane.cs" />
+    <Compile Include="Accord.Math\Geometry\Point3.cs" />
+    <Compile Include="Accord.Math\GlobalSuppressions.cs" />
+    <Compile Include="Accord.Math\Integration\Accord.Math.Integration.cs" />
+    <Compile Include="Accord.Math\Integration\Base\IMultidimensionalIntegration.cs" />
+    <Compile Include="Accord.Math\Integration\Base\INumericalIntegration.cs" />
+    <Compile Include="Accord.Math\Integration\Base\IUnidimensionalIntegration.cs" />
+    <Compile Include="Accord.Math\Integration\InfiniteAdaptiveGaussKronrod.cs" />
+    <Compile Include="Accord.Math\Integration\MonteCarloIntegration.cs" />
+    <Compile Include="Accord.Math\Integration\NonAdaptiveGaussKronrod.cs" />
+    <Compile Include="Accord.Math\Integration\RombergMethod.cs" />
+    <Compile Include="Accord.Math\Integration\TrapezoidalRule.cs" />
+    <Compile Include="Accord.Math\IO\Mat\MatArrayFlags.cs" />
+    <Compile Include="Accord.Math\IO\Mat\MatArrayType.cs" />
+    <Compile Include="Accord.Math\IO\Mat\MatDataTag.cs" />
+    <Compile Include="Accord.Math\IO\Mat\MatDataType.cs" />
+    <Compile Include="Accord.Math\IO\Mat\MatHeader.cs" />
+    <Compile Include="Accord.Math\IO\Mat\MatNode.cs" />
+    <Compile Include="Accord.Math\IO\Mat\MatReader.cs" />
+    <Compile Include="Accord.Math\IO\Mat\MatSparse.cs" />
+    <Compile Include="Accord.Math\IO\NumPy\NpyFormat.Reader.cs" />
+    <Compile Include="Accord.Math\IO\NumPy\NpyFormat.Writer.cs" />
+    <Compile Include="Accord.Math\IO\NumPy\NpzDictionary.cs" />
+    <Compile Include="Accord.Math\IO\NumPy\NpzDictionary`1.cs" />
+    <Compile Include="Accord.Math\IO\NumPy\NpzFormat.Reader.cs" />
+    <Compile Include="Accord.Math\IO\NumPy\NpzFormat.Writer.cs" />
+    <Compile Include="Accord.Math\Kinematics\DenavitHartenbergJoint.cs" />
+    <Compile Include="Accord.Math\Kinematics\DenavitHartenbergMatrix.cs" />
+    <Compile Include="Accord.Math\Kinematics\DenavitHartenbergModel.cs" />
+    <Compile Include="Accord.Math\Kinematics\DenavitHartenbergNode.cs" />
+    <Compile Include="Accord.Math\Kinematics\DenavitHartenbergParameter.cs" />
+    <Compile Include="Accord.Math\Matrix\Jagged.Common.cs" />
+    <Compile Include="Accord.Math\Matrix\Jagged.Construction.cs" />
+    <Compile Include="Accord.Math\Matrix\Jagged.Measures.Generated.cs" />
+    <Compile Include="Accord.Math\Matrix\Jagged.Measures1.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Jagged.Measures.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accord.Math\Matrix\Jagged.MinMax.cs" />
+    <Compile Include="Accord.Math\Matrix\Jagged.Parsing.cs" />
+    <Compile Include="Accord.Math\Matrix\Jagged.Product.Generated.cs" />
+    <Compile Include="Accord.Math\Matrix\Jagged.Product1.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Jagged.Product.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accord.Math\Matrix\Jagged.Random.Generated.cs" />
+    <Compile Include="Accord.Math\Matrix\Jagged.Random1.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Jagged.Random.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accord.Math\Matrix\JaggedReducedRowEchelonForm.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Algebra.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Common.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Comparisons.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Matrix.Comparisons.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accord.Math\Matrix\Matrix.Comparisons1.Generated.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Complex.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Construction.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Conversions.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Conversions.Generated.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Conversions1.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Matrix.Conversions.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accord.Math\Matrix\Matrix.Elementwise.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Get.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Linear.Generated.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Linear1.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Matrix.Linear.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accord.Math\Matrix\Matrix.Measures.Generated.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Measures1.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Matrix.Measures.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accord.Math\Matrix\Matrix.MinMax.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Parsing.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Product.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Matrix.Product.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accord.Math\Matrix\Matrix.Product1.Generated.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Random.Generated.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Random1.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Matrix.Random.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accord.Math\Matrix\Matrix.Reduction.Generated.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Reduction1.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Matrix.Reduction.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accord.Math\Matrix\Matrix.Selection.cs" />
+    <Compile Include="Accord.Math\Matrix\Matrix.Submatrix.cs" />
+    <Compile Include="Accord.Math\Matrix\ReducedRowEchelonForm.cs" />
+    <Compile Include="Accord.Math\Matrix\Vector.MinMax.cs" />
+    <Compile Include="Accord.Math\Norm.cs" />
+    <Compile Include="Accord.Math\Norm.Generated.cs" />
+    <Compile Include="Accord.Math\Norm1.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Norm.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accord.Math\obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="Accord.Math\obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="Accord.Math\obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Accord.Math\Optimization\Accord.Math.Optimization.cs" />
+    <Compile Include="Accord.Math\Optimization\Base\BaseGradientOptimizationMethod.cs" />
+    <Compile Include="Accord.Math\Optimization\Base\BaseOptimizationMethod.cs" />
+    <Compile Include="Accord.Math\Optimization\Base\IFunctionOptimizationMethod.cs" />
+    <Compile Include="Accord.Math\Optimization\Base\IGradientOptimizationMethod.cs" />
+    <Compile Include="Accord.Math\Optimization\Base\ILeastSquaresMethod.cs" />
+    <Compile Include="Accord.Math\Optimization\Base\IOptimizationMethod.cs" />
+    <Compile Include="Accord.Math\Optimization\BinarySearch.cs" />
+    <Compile Include="Accord.Math\Optimization\BrentSearch.cs" />
+    <Compile Include="Accord.Math\Optimization\Constrained\AugmentedLagrangian.cs" />
+    <Compile Include="Accord.Math\Optimization\Constrained\Cobyla.cs" />
+    <Compile Include="Accord.Math\Optimization\Constrained\Constraints\IConstraint.cs" />
+    <Compile Include="Accord.Math\Optimization\Constrained\Constraints\LinearConstraint.cs" />
+    <Compile Include="Accord.Math\Optimization\Constrained\Constraints\LinearConstraintCollection.cs" />
+    <Compile Include="Accord.Math\Optimization\Constrained\Constraints\NonlinearConstraint.cs" />
+    <Compile Include="Accord.Math\Optimization\Constrained\Constraints\QuadraticConstraint.cs" />
+    <Compile Include="Accord.Math\Optimization\Constrained\GoldfarbIdnani.cs" />
+    <Compile Include="Accord.Math\Optimization\ExpressionParser.cs" />
+    <Compile Include="Accord.Math\Optimization\IObjectiveFunction.cs" />
+    <Compile Include="Accord.Math\Optimization\Losses\AbsoluteLoss.cs" />
+    <Compile Include="Accord.Math\Optimization\Losses\BinaryCrossEntropyLoss.cs" />
+    <Compile Include="Accord.Math\Optimization\Losses\CategoryCrossEntropyLoss.cs" />
+    <Compile Include="Accord.Math\Optimization\Losses\HammingLoss.cs" />
+    <Compile Include="Accord.Math\Optimization\Losses\HingeLoss.cs" />
+    <Compile Include="Accord.Math\Optimization\Losses\ILoss.cs" />
+    <Compile Include="Accord.Math\Optimization\Losses\LogisticLoss.cs" />
+    <Compile Include="Accord.Math\Optimization\Losses\LogLikelihoodLoss.cs" />
+    <Compile Include="Accord.Math\Optimization\Losses\LossBase.cs" />
+    <Compile Include="Accord.Math\Optimization\Losses\RSquaredLoss.cs" />
+    <Compile Include="Accord.Math\Optimization\Losses\SmoothHingeLoss.cs" />
+    <Compile Include="Accord.Math\Optimization\Losses\SquaredHingeLoss.cs" />
+    <Compile Include="Accord.Math\Optimization\Losses\SquareLoss.cs" />
+    <Compile Include="Accord.Math\Optimization\Losses\ZeroOneLoss.cs" />
+    <Compile Include="Accord.Math\Optimization\Munkres.cs" />
+    <Compile Include="Accord.Math\Optimization\NonlinearObjectiveFunction.cs" />
+    <Compile Include="Accord.Math\Optimization\QuadraticObjectiveFunction.cs" />
+    <Compile Include="Accord.Math\Optimization\Unconstrained\BoundedBroydenFletcherGoldfarbShanno.cs" />
+    <Compile Include="Accord.Math\Optimization\Unconstrained\BoundedBroydenFletcherGoldfarbShanno.FORTRAN.cs" />
+    <Compile Include="Accord.Math\Optimization\Unconstrained\BoundedBroydenFletcherGoldfarbShannoInnerStatus.cs" />
+    <Compile Include="Accord.Math\Optimization\Unconstrained\BroydenFletcherGoldfarbShanno.cs" />
+    <Compile Include="Accord.Math\Optimization\Unconstrained\BroydenFletcherGoldfarbShanno.LIBLBFGS.cs" />
+    <Compile Include="Accord.Math\Optimization\Unconstrained\ConjugateGradient.cs" />
+    <Compile Include="Accord.Math\Optimization\Unconstrained\FanChenLinQuadraticOptimization.cs" />
+    <Compile Include="Accord.Math\Optimization\Unconstrained\GradientDescent.cs" />
+    <Compile Include="Accord.Math\Optimization\Unconstrained\Least Squares\GaussNewton.cs" />
+    <Compile Include="Accord.Math\Optimization\Unconstrained\Least Squares\LevenbergMarquardt.cs" />
+    <Compile Include="Accord.Math\Optimization\Unconstrained\LineSearchFailedException.cs" />
+    <Compile Include="Accord.Math\Optimization\Unconstrained\NelderMead.cs" />
+    <Compile Include="Accord.Math\Optimization\Unconstrained\OptimizationProgressEventHandler.cs" />
+    <Compile Include="Accord.Math\Optimization\Unconstrained\ResilientBackpropagation.cs" />
+    <Compile Include="Accord.Math\Optimization\Unconstrained\Subplex.cs" />
+    <Compile Include="Accord.Math\Optimization\Unconstrained\TrustRegionNewtonMethod.cs" />
+    <Compile Include="Accord.Math\Properties\AssemblyInfo.cs" />
+    <Compile Include="Accord.Math\Random\Generator.cs" />
+    <Compile Include="Accord.Math\Random\IRandomNumberGenerator.cs" />
+    <Compile Include="Accord.Math\Random\ZigguratExponentialGenerator.cs" />
+    <Compile Include="Accord.Math\Random\ZigguratNormalGenerator.cs" />
+    <Compile Include="Accord.Math\Random\ZigguratUniformGenerator.cs" />
+    <Compile Include="Accord.Math\Random\ZigguratUniformOneGenerator.cs" />
+    <Compile Include="Accord.Math\Sort.cs" />
+    <Compile Include="Accord.Math\Special.cs" />
+    <Compile Include="Accord.Math\Taylor.cs" />
+    <Compile Include="Accord.Math\Tools.cs" />
+    <Compile Include="Accord.Math\Transforms\CosineTransform.cs" />
+    <Compile Include="Accord.Math\Transforms\FourierTransform2.cs" />
+    <Compile Include="Accord.Math\Transforms\HartleyTransform.cs" />
+    <Compile Include="Accord.Math\Transforms\HilbertTransform.cs" />
+    <Compile Include="Accord.Math\Transforms\SineTransform.cs" />
+    <Compile Include="Accord.Math\Vector\Vector.Common.cs" />
+    <Compile Include="Accord.Math\Vector\Vector.Construction.cs" />
+    <Compile Include="Accord.Math\Vector\Vector.Interval.Generated.cs" />
+    <Compile Include="Accord.Math\Vector\Vector.Interval1.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vector.Interval.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accord.Math\Vector\Vector.Order.cs" />
+    <Compile Include="Accord.Math\Vector\Vector.Random.Generated.cs" />
+    <Compile Include="Accord.Math\Vector\Vector.Random1.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vector.Random.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accord.Math\Vector\Vector.Range.Generated.cs" />
+    <Compile Include="Accord.Math\Vector\Vector.Range1.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vector.Range.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accord.Math\Vector\Vector.Scale.Generated.cs" />
+    <Compile Include="Accord.Math\Vector\Vector.Scale1.Generated.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Vector.Scale.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Accord.Math\Vector\Vector.Sparse.cs" />
+    <Compile Include="Accord.Math\Wavelets\Base\IWavelet.cs" />
+    <Compile Include="Accord.Math\Wavelets\CDF97.cs" />
+    <Compile Include="Accord.Math\Wavelets\Haar.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Accord.Statistics.Analysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\BaseDiscriminantAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\BasePrincipalComponentAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Base\IAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Base\IAnalysisComponent.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Base\IDescriptiveMeasures.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Base\IDiscriminantAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Base\IMultivariateAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Base\IMultivariateRegressionAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Base\IProjectionAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Base\IRegressionAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\CircularDescriptiveAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Contrast Functions\Exponential.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Contrast Functions\IContrastFunction.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Contrast Functions\Kurtosis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Contrast Functions\Logcosh.cs" />
+    <Compile Include="Accord.Statistics\Analysis\DescriptiveAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\DistributionAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\IndependentComponentAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\KernelDiscriminantAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\KernelPrincipalComponentAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\LinearDiscriminantAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\LogisticRegressionAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\MultinomialLogisticRegressionAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\MultipleLinearRegressionAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\PartialLeastSquaresAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Performance\ConfusionMatrix.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Performance\GeneralConfusionMatrix.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Performance\ReceiverOperatingCharacteristic.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Performance\WeightedConfusionMatrix.cs" />
+    <Compile Include="Accord.Statistics\Analysis\Pipeline.cs" />
+    <Compile Include="Accord.Statistics\Analysis\PrincipalComponentAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\ProcustesAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\ProportionalHazardsAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Analysis\StepwiseLogisticRegressionAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Testing\Accord.Statistics.Testing.cs" />
+    <Compile Include="Accord.Statistics\Testing\AndersonDarlingTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\Base\HypothesisTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\Base\HypothesisTypes.cs" />
+    <Compile Include="Accord.Statistics\Testing\Base\IHypothesisTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\BinomialTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\ChiSquareTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\Contingency\AverageKappaTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\Contingency\BhapkarTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\Contingency\BowkerTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\Contingency\FisherExactTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\Contingency\KappaTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\Contingency\McNemarTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\Contingency\ReceiverOperatingCurveTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\Contingency\StuartMaxwellTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\Contingency\TwoAverageKappaTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\Contingency\TwoMatrixKappaTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\Contingency\TwoReceiverOperatingCurveTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\FTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\GrubbTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\KolmogorovSmirnovTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\LillieforsTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\MultinomialTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\Multiple Samples\AnovaSourceCollection.cs" />
+    <Compile Include="Accord.Statistics\Testing\Multiple Samples\AnovaVariationSource.cs" />
+    <Compile Include="Accord.Statistics\Testing\Multiple Samples\BartlettTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\Multiple Samples\IAnova.cs" />
+    <Compile Include="Accord.Statistics\Testing\Multiple Samples\LeveneTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\Multiple Samples\OneWayAnova.cs" />
+    <Compile Include="Accord.Statistics\Testing\Multiple Samples\TwoWayAnova.cs" />
+    <Compile Include="Accord.Statistics\Testing\Power\Accord.Statistics.Testing.Power.cs" />
+    <Compile Include="Accord.Statistics\Testing\Power\Base\BaseOneSamplePowerAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Testing\Power\Base\BaseTwoSamplePowerAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Testing\Power\Base\IPowerAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Testing\Power\Base\ITwoSamplePowerAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Testing\Power\TTestPowerAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Testing\Power\TwoSample\TwoSampleTTestPowerAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Testing\Power\TwoSample\TwoSampleZTestPowerAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Testing\Power\ZTestPowerAnalysis.cs" />
+    <Compile Include="Accord.Statistics\Testing\ShapiroWilkTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\SignTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\TTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\TwoSample\MannWhitneyWilcoxonTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\TwoSample\PairedTTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\TwoSample\TwoProportionZTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\TwoSample\TwoSampleKolmogorovSmirnovTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\TwoSample\TwoSampleSignTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\TwoSample\TwoSampleTTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\TwoSample\TwoSampleWilcoxonSignedRankTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\TwoSample\TwoSampleZTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\WaldTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\WilcoxonSignedRankTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\WilcoxonTest.cs" />
+    <Compile Include="Accord.Statistics\Testing\ZTest.cs" />
+    <Compile Include="DecisionTrees\Accord.MachineLearning.DecisionTrees.cs" />
+    <Compile Include="DecisionTrees\ComparisonKind.cs" />
+    <Compile Include="DecisionTrees\DecisionBranchNodeCollection.cs" />
+    <Compile Include="DecisionTrees\DecisionNode.cs" />
+    <Compile Include="DecisionTrees\DecisionTree.cs" />
+    <Compile Include="DecisionTrees\DecisionTreeHelper.cs" />
+    <Compile Include="DecisionTrees\DecisionTreeTraversal.cs" />
+    <Compile Include="DecisionTrees\DecisionTreeWriter.cs" />
+    <Compile Include="DecisionTrees\DecisionVariable.cs" />
+    <Compile Include="DecisionTrees\Learning\Accord.MachineLearning.DecisionTrees.Learning.cs" />
+    <Compile Include="DecisionTrees\Learning\C45Learning.cs" />
+    <Compile Include="DecisionTrees\Learning\ID3Learning.cs" />
+    <Compile Include="DecisionTrees\Pruning\Accord.MachineLearning.DecisionTrees.Prunning.cs" />
+    <Compile Include="DecisionTrees\Pruning\ErrorBasedPruning.cs" />
+    <Compile Include="DecisionTrees\Pruning\ReducedErrorPruning.cs" />
+    <Compile Include="DecisionTrees\RandomForest.cs" />
+    <Compile Include="DecisionTrees\RandomForestLearning.cs" />
+    <Compile Include="DecisionTrees\Rules\Accord.MachineLearning.DecisionTrees.Rules.cs" />
+    <Compile Include="DecisionTrees\Rules\Antecedent.cs" />
+    <Compile Include="DecisionTrees\Rules\DecisionRule.cs" />
+    <Compile Include="DecisionTrees\Rules\DecisionSet.cs" />
+    <Compile Include="DecisionTrees\Rules\Simplification.cs" />
+    <Compile Include="DecisionTrees\TreeExpression.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Accord.Math\Accord.Math.cd" />
+    <None Include="Accord.Math\Accord.snk" />
+    <None Include="Accord.Math\Comparers\Accord.Math.Comparers.cd" />
+    <None Include="Accord.Math\Decompositions\Accord.Math.Decompositions.cd" />
+    <None Include="Accord.Math\Integration\Accord.Math.Integration.cd" />
+    <None Include="Accord.Math\obj\Debug\Accord.Math.csprojResolveAssemblyReference.cache" />
+    <None Include="Accord.Math\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="Accord.Math\Optimization\Accord.Math.Optimization.cd" />
+    <None Include="Accord.Statistics\Analysis\Accord.Statistics.Analysis.cd" />
+    <None Include="Accord.Statistics\Testing\Accord.Statistics.Testing.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Accord.Math\Accord.Math.csproj" />
+    <Content Include="Accord.Math\Decompositions\CholeskyDecomposition.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CholeskyDecomposition1.txt</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\CholeskyDecomposition.txt" />
+    <Content Include="Accord.Math\Decompositions\CholeskyDecomposition1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CholeskyDecomposition.tt</DependentUpon>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\EigenvalueDecomposition.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>EigenvalueDecomposition1.txt</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\EigenvalueDecomposition.txt" />
+    <Content Include="Accord.Math\Decompositions\EigenvalueDecomposition1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EigenvalueDecomposition.tt</DependentUpon>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\JaggedCholeskyDecomposition.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>JaggedCholeskyDecomposition1.txt</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\JaggedCholeskyDecomposition.txt" />
+    <Content Include="Accord.Math\Decompositions\JaggedCholeskyDecomposition1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JaggedCholeskyDecomposition.tt</DependentUpon>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\JaggedEigenvalueDecomposition.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>JaggedEigenvalueDecomposition1.txt</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\JaggedEigenvalueDecomposition.txt" />
+    <Content Include="Accord.Math\Decompositions\JaggedEigenvalueDecomposition1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JaggedEigenvalueDecomposition.tt</DependentUpon>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\JaggedLuDecomposition.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>JaggedLuDecomposition1.txt</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\JaggedLuDecomposition.txt" />
+    <Content Include="Accord.Math\Decompositions\JaggedLuDecomposition1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JaggedLuDecomposition.tt</DependentUpon>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\JaggedQrDecomposition.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>JaggedQrDecomposition1.txt</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\JaggedQrDecomposition.txt" />
+    <Content Include="Accord.Math\Decompositions\JaggedQrDecomposition1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JaggedQrDecomposition.tt</DependentUpon>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\JaggedSingularValueDecomposition.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>JaggedSingularValueDecomposition1.txt</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\JaggedSingularValueDecomposition.txt" />
+    <Content Include="Accord.Math\Decompositions\JaggedSingularValueDecomposition1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>JaggedSingularValueDecomposition.tt</DependentUpon>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\LuDecomposition.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>LuDecomposition1.txt</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\LuDecomposition.txt" />
+    <Content Include="Accord.Math\Decompositions\LuDecomposition1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LuDecomposition.tt</DependentUpon>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\QrDecomposition.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>QrDecomposition1.txt</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\QrDecomposition.txt" />
+    <Content Include="Accord.Math\Decompositions\QrDecomposition1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QrDecomposition.tt</DependentUpon>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\SingularValueDecomposition.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SingularValueDecomposition1.txt</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Decompositions\SingularValueDecomposition.txt" />
+    <Content Include="Accord.Math\Decompositions\SingularValueDecomposition1.txt">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SingularValueDecomposition.tt</DependentUpon>
+    </Content>
+    <Content Include="Accord.Math\Distance.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Distance1.Generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Matrix\Jagged.Measures.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Jagged.Measures1.Generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Matrix\Jagged.Product.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Jagged.Product1.Generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Matrix\Jagged.Random.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Jagged.Random1.Generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Matrix\Matrix.Comparisons.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Matrix.Comparisons.Generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Matrix\Matrix.Conversions.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Matrix.Conversions1.Generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Matrix\Matrix.Linear.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Matrix.Linear1.Generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Matrix\Matrix.Measures.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Matrix.Measures1.Generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Matrix\Matrix.Product.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Matrix.Product.Generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Matrix\Matrix.Random.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Matrix.Random1.Generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Matrix\Matrix.Reduction.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Matrix.Reduction1.Generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Norm.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Norm1.Generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\obj\Debug\Accord.Math.csproj.FileListAbsolute.txt" />
+    <Content Include="Accord.Math\obj\Debug\Accord.Math.dll" />
+    <Content Include="Accord.Math\obj\Debug\Accord.Math.pdb" />
+    <Content Include="Accord.Math\Properties\CustomDictionary.xml" />
+    <Content Include="Accord.Math\Vector\Vector.Interval.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Vector.Interval1.Generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Vector\Vector.Random.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Vector.Random1.Generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Vector\Vector.Range.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Vector.Range1.Generated.cs</LastGenOutput>
+    </Content>
+    <Content Include="Accord.Math\Vector\Vector.Scale.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Vector.Scale1.Generated.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Accord.Math\obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
